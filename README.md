@@ -1,4 +1,4 @@
-# 🚀 Hitesh Kandpal | Advanced Portfolio
+# 🚀 Hitesh Kandpal | Portfolio
 
 Welcome to my personal portfolio website.
 

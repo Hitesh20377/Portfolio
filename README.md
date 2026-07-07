@@ -6,7 +6,7 @@ This portfolio showcases my technical skills, projects, internship experience, r
 
 ## 🌐 Live Portfolio
 
-(Add your portfolio URL here after deployment)
+https://hitesh20377.github.io/Portfolio/
 
 ---
 

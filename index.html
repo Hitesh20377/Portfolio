@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitesh Kandpal | Advanced Portfolio</title>
+  <meta name="description"
+    content="Advanced portfolio of Hitesh Kandpal - Machine Learning Intern, Java Developer, Data Analyst, and CSE student." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+
+  <style>
+    .project-action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 10px;
+    }
+
+    .project-action-buttons .text-link {
+      width: auto;
+      height: auto;
+      padding: 12px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-grid">
+      <div class="loader-logo">HK</div>
+      <div class="loader-track"><span></span></div>
+      <p>Loading advanced portfolio...</p>
+    </div>
+  </div>
+
+  <div class="noise-layer"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="command-palette" id="commandPalette">
+    <div class="command-box">
+      <div class="command-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="commandInput" placeholder="Search sections: projects, skills, contact..." />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="command-results">
+        <a href="#home">Go to Home</a>
+        <a href="#about">Go to About</a>
+        <a href="#skills">Go to Skills</a>
+        <a href="#experience">Go to Experience</a>
+        <a href="#projects">Go to Projects</a>
+        <a href="#research">Go to Research</a>
+        <a href="#github">Go to GitHub</a>
+        <a href="#leetcode">Go to LeetCode</a>
+        <a href="#contact">Go to Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header" id="mainHeader">
+    <a href="#home" class="brand">
+      <span class="brand-icon">HK</span>
+      <span class="brand-text">Hitesh<span>.</span></span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="command-btn" id="openCommand"><i class="fa-solid fa-command"></i><span>Ctrl K</span></button>
+      <a href="assets/resume.pdf" class="resume-download" download>Resume</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div id="particlesCanvas"></div>
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+      <div class="aurora aurora-three"></div>
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge magnetic"><span class="pulse-dot"></span>Open to internships and projects</div>
+          <p class="hero-kicker">Hello, I am</p>
+          <h1 class="hero-title"><span>Hitesh</span><span>Kandpal</span></h1>
+          <h2 class="hero-subtitle">I build as a <span id="typedText"></span></h2>
+          <p class="hero-description">Computer Science student focused on Machine Learning, Data Science, Java
+            Development, dashboards, research documentation, and deployable real-world software solutions.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary magnetic">Explore Projects <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="assets/resume.pdf" class="btn btn-secondary magnetic" download>Download Resume <i
+                class="fa-solid fa-download"></i></a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/Hitesh20377" target="_blank" class="social-link"><i
+                class="fa-brands fa-github"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/hitesh-kandpal-292644286/" target="_blank" class="social-link"><i
+                class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            <a href="https://leetcode.com/u/Hitesh__01/" target="_blank" class="social-link"><i
+                class="fa-solid fa-code"></i>LeetCode</a>
+            <a href="mailto:hitesh20377@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i>Email</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="orbital-card" data-tilt>
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="profile-core">
+              <div class="profile-avatar">HK</div>
+              <h3>ML Intern</h3>
+              <p>Python • ML • Java • Analytics</p>
+            </div>
+            <div class="float-chip chip-python"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="float-chip chip-java"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="float-chip chip-ml"><i class="fa-solid fa-brain"></i> ML</div>
+            <div class="float-chip chip-data"><i class="fa-solid fa-chart-line"></i> Data</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card reveal">
+          <h3 data-count="2">0</h3>
+          <p>Deployed ML Projects</p>
+        </div>
+        <div class="metric-card reveal">
+          <h3 data-count="3">0</h3>
+          <p>Months Internship</p>
+        </div>
+        <div class="metric-card reveal">
+          <h3 data-count="2">0</h3>
+          <p>Research Papers</p>
+        </div>
+        <div class="metric-card reveal">
+          <h3 data-count="250">0</h3>
+          <p>LeetCode Target</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-heading reveal">
+        <p class="section-tag">About Me</p>
+        <h2>Adaptive learner building practical AI-powered solutions.</h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-image-card reveal" data-tilt>
+          <div class="avatar-large">HK</div>
+          <div class="status-card"><span></span>Currently learning advanced DSA, ML deployment and system design.</div>
+        </div>
+        <div class="about-right">
+          <div class="glass-card reveal">
+            <h3>Who am I?</h3>
+            <p>I am Hitesh Kandpal, a B.Tech CSE student from DIT University. I enjoy turning ideas into working
+              software through Machine Learning, Data Analysis, Java development, dashboards, deployment, and clean
+              documentation.</p>
+          </div>
+          <div class="glass-card reveal">
+            <h3>What I build?</h3>
+            <p>I build ML models, data dashboards, research-backed projects, deployed web apps, and Java-based
+              applications. My focus is practical implementation, recruiter-friendly presentation, and real-world
+              usefulness.</p>
+          </div>
+          <div class="about-pill-grid reveal"><span>Machine Learning</span><span>Data Science</span><span>Java
+              Developer</span><span>Data Analyst</span><span>Research-Oriented</span><span>Adaptive Learner</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="section-heading reveal">
+        <p class="section-tag">Skills Galaxy</p>
+        <h2>Technologies I use to design, build, analyze and deploy.</h2>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-radar reveal">
+          <div class="radar-circle circle-1"></div>
+          <div class="radar-circle circle-2"></div>
+          <div class="radar-circle circle-3"></div>
+          <div class="radar-line line-1"></div>
+          <div class="radar-line line-2"></div>
+          <div class="radar-center"><i class="fa-solid fa-code"></i><span>Core Stack</span></div>
+          <div class="radar-item item-1">Java</div>
+          <div class="radar-item item-2">Python</div>
+          <div class="radar-item item-3">ML</div>
+          <div class="radar-item item-4">SQL</div>
+          <div class="radar-item item-5">Flask</div>
+          <div class="radar-item item-6">Git</div>
+        </div>
+        <div class="skills-panel">
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-code"></i> Programming</h3>
+            <div class="skill-bar" data-level="82">
+              <div class="skill-info"><span>Java</span><b>82%</b></div>
+              <div class="bar-track"><span></span></div>
+            </div>
+            <div class="skill-bar" data-level="80">
+              <div class="skill-info"><span>Python</span><b>80%</b></div>
+              <div class="bar-track"><span></span></div>
+            </div>
+            <div class="skill-bar" data-level="72">
+              <div class="skill-info"><span>JavaScript</span><b>72%</b></div>
+              <div class="bar-track"><span></span></div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-brain"></i> Machine Learning</h3>
+            <div class="skill-cloud"><span>Scikit-learn</span><span>Random
+                Forest</span><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Model
+                Evaluation</span><span>Feature Engineering</span><span>Deployment</span></div>
+          </div>
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-layer-group"></i> Tools</h3>
+            <div class="skill-cloud"><span>GitHub</span><span>VS
+                Code</span><span>Streamlit</span><span>Flask</span><span>Render</span><span>MySQL</span><span>Overleaf</span><span>Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="section-heading reveal">
+        <p class="section-tag">Experience</p>
+        <h2>Internship, project building, research and deployment journey.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <article class="timeline-card reveal">
+          <div class="timeline-dot"></div><span class="timeline-date">2026</span>
+          <h3>Machine Learning Intern</h3>
+          <h4>Unified Mentor</h4>
+          <p>Completed a 3-month internship focused on Machine Learning, Data Analysis, dashboards, deployment,
+            documentation, and research-based project presentation.</p>
+          <ul>
+            <li>Built Bank Customer Churn Prediction system.</li>
+            <li>Built Logistics Delivery Risk Prediction dashboard.</li>
+            <li>Created live demos, GitHub repositories and research papers.</li>
+          </ul>
+        </article>
+        <article class="timeline-card reveal">
+          <div class="timeline-dot"></div><span class="timeline-date">2026</span>
+          <h3>Research & Deployment</h3>
+          <h4>ML Projects</h4>
+          <p>Worked on end-to-end ML workflows from data cleaning to model training, dashboard development, deployment
+            and IEEE-style documentation.</p>
+          <ul>
+            <li>Random Forest based predictive systems.</li>
+            <li>Business KPI dashboards and risk scoring.</li>
+            <li>Research-oriented explanation of methodology and results.</li>
+          </ul>
+        </article>
+        <article class="timeline-card reveal">
+          <div class="timeline-dot"></div><span class="timeline-date">Ongoing</span>
+          <h3>DSA & Placement Preparation</h3>
+          <h4>Java + LeetCode</h4>
+          <p>Improving problem-solving skills using Java with focus on arrays, strings, trees, graphs, dynamic
+            programming and interview-ready coding patterns.</p>
+          <ul>
+            <li>Daily LeetCode practice target.</li>
+            <li>Java-based DSA preparation.</li>
+            <li>Campus placement focused improvement plan.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-heading reveal">
+        <p class="section-tag">Featured Projects</p>
+        <h2>Projects built with models, dashboards, deployment and documentation.</h2>
+      </div>
+      <div class="project-showcase">
+        <article class="project-card featured reveal" data-tilt>
+          <div class="project-top"><span class="project-index">01</span>
+            <div class="project-links"><a href="https://bank-churn-prediction-system.onrender.com/" target="_blank"
+                title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+                href="https://github.com/Hitesh20377" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+          </div>
+          <h3>Bank Customer Churn Prediction</h3>
+          <p>Machine Learning system that predicts customer churn using Random Forest and provides retention-focused
+            insights through dashboard analysis.</p>
+          <div class="project-tags"><span>Python</span><span>Random
+              Forest</span><span>Flask</span><span>Streamlit</span><span>EDA</span></div>
+          <div class="project-action-buttons"><a href="https://bank-churn-prediction-system.onrender.com/"
+              target="_blank" class="text-link">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+              href="https://github.com/Hitesh20377/Bank-Churn-Prediction-System/blob/main/README.md" target="_blank"
+              class="text-link">GitHub Repo <i class="fa-brands fa-github"></i></a></div>
+          <div class="project-metrics">
+            <div><b>ML</b><span>Prediction</span></div>
+            <div><b>Live</b><span>Deployment</span></div>
+            <div><b>Paper</b><span>Research</span></div>
+          </div>
+        </article>
+        <article class="project-card featured reveal" data-tilt>
+          <div class="project-top"><span class="project-index">02</span>
+            <div class="project-links"><a href="https://delivery-risk-prediction-5.onrender.com/" target="_blank"
+                title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+                href="https://github.com/Hitesh20377" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+          </div>
+          <h3>Logistics Delivery Risk Prediction</h3>
+          <p>ML-powered dashboard that predicts late delivery risk and helps logistics teams prioritize orders using
+            risk scores, KPIs and operational insights.</p>
+          <div class="project-tags"><span>Python</span><span>Machine Learning</span><span>Streamlit</span><span>Risk
+              Scoring</span><span>Analytics</span></div>
+          <div class="project-action-buttons">
+            <a href="https://delivery-risk-prediction-5.onrender.com/" target="_blank" class="text-link">
+              Live Demo
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a href="https://github.com/Hitesh20377/Delivery-Risk-Prediction/blob/main/README.md" target="_blank"
+              class="text-link">
+              GitHub Repo
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="project-metrics">
+            <div><b>67%+</b><span>Accuracy</span></div>
+            <div><b>KPI</b><span>Dashboard</span></div>
+            <div><b>Live</b><span>Render</span></div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-top"><span class="project-index">03</span>
+            <div class="project-links"><a href="https://github.com/yuvi-yuvraj/Chatting-Application/blob/main/README.md"
+                target="_blank" title="GitHub Repository"><i class="fa-brands fa-github"></i></a></div>
+          </div>
+          <h3>Java Chat Application</h3>
+          <p>Group chat application built using Java Socket Programming with client-server communication and GUI-based
+            interaction.</p>
+          <div class="project-action-buttons">
+
+            <a href="https://github.com/yuvi-yuvraj/Chatting-Application/blob/main/README.md" target="_blank"
+              class="text-link">
+              GitHub Repo
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="research section" id="research">
+      <div class="section-heading reveal">
+        <p class="section-tag">Research</p>
+        <h2>Research-style documentation for machine learning projects.</h2>
+      </div>
+      <div class="research-grid">
+        <article class="research-card reveal">
+          <div class="research-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Bank Customer Churn Prediction Research Paper</h3>
+          <p>IEEE-style research documentation covering problem statement, methodology, implementation, model evaluation
+            and business impact.</p><a href="assets/Bank_Churn_Research_paper.pdf" target="_blank"
+            class="text-link">View Paper <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="research-card reveal">
+          <div class="research-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Logistics Delivery Risk Prediction Research Paper</h3>
+          <p>Research documentation focused on late delivery prediction, risk scoring, operational KPIs and machine
+            learning based decision support.</p><a href="assets/Delivery_risk_research_paper.pdf" target="_blank"
+            class="text-link">View Paper <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="analytics section" id="github">
+      <div class="section-heading reveal">
+        <p class="section-tag">Developer Analytics</p>
+        <h2>GitHub-style coding dashboard and live-looking stats.</h2>
+      </div>
+      <div class="analytics-grid">
+        <div class="analytics-card reveal">
+          <h3>GitHub</h3>
+          <p>@Hitesh20377</p>
+          <div class="heatmap" id="githubHeatmap"></div>
+        </div>
+        <div class="analytics-card reveal">
+          <h3>Languages</h3><canvas id="languageCanvas" width="420" height="260"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="leetcode section" id="leetcode">
+      <div class="section-heading reveal">
+        <p class="section-tag">LeetCode</p>
+        <h2>Placement-focused DSA progress and problem-solving growth.</h2>
+      </div>
+      <div class="leet-grid">
+        <div class="leet-card reveal">
+          <h3>Target</h3><strong>250+</strong>
+          <p>Problems</p>
+        </div>
+        <div class="leet-card reveal">
+          <h3>Focus</h3><strong>Java</strong>
+          <p>DSA</p>
+        </div>
+        <div class="leet-card reveal">
+          <h3>Topics</h3><strong>10+</strong>
+          <p>Core Patterns</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="terminal section">
+      <div class="terminal-window reveal">
+        <div class="terminal-header">
+          <div class="terminal-dots"><span></span><span></span><span></span></div>
+          <p>hitesh@portfolio:~</p>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <p><span>$</span> whoami</p>
+          <p>Hitesh Kandpal — ML Intern, Java Developer, Data Analyst</p>
+          <p><span>$</span> current_focus</p>
+          <p>DSA, Machine Learning Projects, Deployment, Placement Preparation</p>
+          <p><span>$</span> contact --email</p>
+          <p>hitesh20377@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-heading reveal">
+        <p class="section-tag">Contact</p>
+        <h2>Let’s build something useful, intelligent and impactful.</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-card reveal">
+          <h3>Get in touch</h3>
+          <p>Open to internships, ML projects, Java development work, data analysis opportunities and collaboration.</p>
+          <div class="contact-methods"><a href="mailto:hitesh20377@gmail.com"><i
+                class="fa-solid fa-envelope"></i><span>hitesh20377@gmail.com</span></a><a
+              href="https://github.com/Hitesh20377" target="_blank"><i
+                class="fa-brands fa-github"></i><span>GitHub</span></a><a
+              href="https://www.linkedin.com/in/hitesh-kandpal-292644286/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a><a href="https://leetcode.com/u/Hitesh__01/"
+              target="_blank"><i class="fa-solid fa-code"></i><span>LeetCode</span></a></div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="input-group"><input type="text" name="name" required><label>Your Name</label></div>
+          <div class="input-group"><input type="email" name="email" required><label>Your Email</label></div>
+          <div class="input-group"><input type="text" name="subject" required><label>Subject</label></div>
+          <div class="input-group textarea"><textarea name="message" required></textarea><label>Message</label></div>
+          <button type="submit" class="btn btn-primary magnetic">Send Message <i
+              class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+    <!-- advanced-component-reserve-0001: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0002: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0003: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0004: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0005: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0006: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0007: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0008: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0009: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0010: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0011: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0012: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0013: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0014: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0015: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0016: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0017: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0018: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0019: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0020: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0021: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0022: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0023: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0024: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0025: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0026: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0027: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0028: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0029: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0030: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0031: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0032: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0033: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0034: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0035: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0036: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0037: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0038: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0039: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0040: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0041: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0042: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0043: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0044: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0045: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0046: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0047: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0048: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0049: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0050: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0051: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0052: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0053: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0054: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0055: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0056: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0057: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0058: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0059: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0060: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0061: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0062: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0063: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0064: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0065: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0066: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0067: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0068: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0069: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0070: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0071: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0072: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0073: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0074: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0075: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0076: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0077: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0078: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0079: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0080: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0081: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0082: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0083: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0084: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0085: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0086: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0087: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0088: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0089: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0090: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0091: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0092: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0093: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0094: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0095: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0096: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0097: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0098: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0099: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0100: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0101: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0102: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0103: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0104: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0105: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0106: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0107: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0108: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0109: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0110: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0111: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0112: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0113: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0114: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0115: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0116: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0117: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0118: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0119: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0120: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0121: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0122: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0123: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0124: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0125: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0126: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0127: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0128: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0129: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0130: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0131: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0132: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0133: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0134: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0135: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0136: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0137: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0138: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0139: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0140: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0141: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0142: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0143: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0144: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0145: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0146: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0147: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0148: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0149: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0150: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0151: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0152: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0153: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0154: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0155: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0156: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0157: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0158: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0159: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0160: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0161: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0162: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0163: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0164: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0165: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0166: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0167: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0168: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0169: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0170: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0171: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0172: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0173: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0174: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0175: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0176: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0177: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0178: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0179: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0180: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0181: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0182: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0183: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0184: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0185: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0186: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0187: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0188: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0189: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0190: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0191: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0192: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0193: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0194: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0195: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0196: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0197: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0198: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0199: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0200: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0201: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0202: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0203: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0204: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0205: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0206: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0207: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0208: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0209: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0210: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0211: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0212: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0213: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0214: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0215: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0216: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0217: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0218: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0219: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0220: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0221: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0222: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0223: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0224: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0225: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0226: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0227: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0228: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0229: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0230: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0231: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0232: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0233: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0234: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0235: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0236: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0237: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0238: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0239: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0240: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0241: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0242: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0243: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0244: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0245: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0246: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0247: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0248: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0249: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0250: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0251: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0252: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0253: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0254: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0255: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0256: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0257: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0258: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0259: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0260: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0261: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0262: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0263: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0264: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0265: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0266: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0267: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0268: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0269: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0270: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0271: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0272: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0273: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0274: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0275: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0276: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0277: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0278: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0279: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0280: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0281: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0282: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0283: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0284: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0285: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0286: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0287: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0288: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0289: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0290: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0291: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0292: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0293: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0294: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0295: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0296: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0297: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0298: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0299: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0300: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0301: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0302: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0303: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0304: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0305: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0306: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0307: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0308: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0309: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0310: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0311: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0312: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0313: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0314: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0315: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0316: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0317: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0318: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0319: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0320: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0321: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0322: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0323: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0324: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0325: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0326: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0327: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0328: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0329: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0330: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0331: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0332: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0333: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0334: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0335: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0336: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0337: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0338: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0339: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0340: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0341: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0342: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0343: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0344: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0345: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0346: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0347: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0348: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0349: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0350: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0351: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0352: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0353: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0354: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0355: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0356: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0357: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0358: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0359: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0360: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0361: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0362: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0363: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0364: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0365: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0366: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0367: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0368: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0369: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0370: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0371: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0372: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0373: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0374: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0375: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0376: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0377: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0378: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0379: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0380: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0381: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0382: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0383: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0384: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0385: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0386: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0387: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0388: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0389: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0390: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0391: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0392: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0393: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0394: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0395: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0396: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0397: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0398: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0399: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0400: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0401: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0402: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0403: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0404: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0405: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0406: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0407: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0408: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0409: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0410: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0411: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0412: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0413: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0414: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0415: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0416: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0417: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0418: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0419: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0420: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0421: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0422: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0423: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0424: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0425: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0426: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0427: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0428: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0429: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0430: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0431: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0432: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0433: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0434: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0435: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0436: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0437: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0438: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0439: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0440: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0441: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0442: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0443: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0444: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0445: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0446: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0447: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0448: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0449: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0450: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0451: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0452: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0453: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0454: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0455: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0456: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0457: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0458: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0459: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0460: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0461: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0462: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0463: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0464: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0465: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0466: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0467: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0468: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0469: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0470: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0471: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0472: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0473: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0474: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0475: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0476: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0477: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0478: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0479: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0480: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0481: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0482: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0483: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0484: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0485: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0486: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0487: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0488: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0489: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0490: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0491: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0492: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0493: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0494: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0495: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0496: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0497: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0498: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0499: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0500: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0501: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0502: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0503: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0504: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0505: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0506: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0507: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0508: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0509: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0510: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0511: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0512: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0513: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0514: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0515: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0516: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0517: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0518: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0519: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0520: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0521: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0522: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0523: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0524: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0525: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0526: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0527: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0528: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0529: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0530: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0531: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0532: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0533: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0534: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0535: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0536: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0537: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0538: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0539: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0540: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0541: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0542: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0543: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0544: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0545: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0546: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0547: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0548: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0549: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0550: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0551: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0552: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0553: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0554: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0555: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0556: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0557: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0558: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0559: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0560: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0561: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0562: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0563: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0564: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0565: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0566: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0567: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0568: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0569: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0570: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0571: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0572: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0573: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0574: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0575: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0576: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0577: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0578: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0579: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0580: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0581: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0582: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0583: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0584: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0585: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0586: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0587: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0588: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0589: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0590: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0591: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0592: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0593: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0594: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0595: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0596: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0597: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0598: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0599: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0600: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0601: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0602: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0603: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0604: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0605: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0606: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0607: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0608: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0609: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0610: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0611: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0612: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0613: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0614: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0615: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0616: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0617: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0618: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0619: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0620: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0621: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0622: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0623: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0624: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0625: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0626: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0627: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0628: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0629: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0630: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0631: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0632: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0633: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0634: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0635: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0636: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0637: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0638: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0639: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0640: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0641: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0642: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0643: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0644: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0645: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0646: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0647: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0648: reserved for future section/module expansion -->
+    <!-- advanced-component-reserve-0649: reserved for future section/module expansion -->
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content"><a href="#home" class="footer-logo">HK<span>.</span></a>
+      <p>Designed & Developed by Hitesh Kandpal © 2026</p>
+      <div class="footer-links"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
